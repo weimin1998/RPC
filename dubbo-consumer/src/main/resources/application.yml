@@ -1,0 +1,14 @@
+server:
+  port: 8084
+
+dubbo:
+  application:
+    name: dubbo-consumer
+  registry:
+    # 注册中心 multicast不推荐
+    #address: multicast://224.5.6.7:1234
+
+    # 单机
+    #address: zookeeper://123.56.169.57:2181
+    # 集群
+    address: zookeeper://192.168.61.128:2181?backup=192.168.61.129:2181,192.168.61.130:2181
